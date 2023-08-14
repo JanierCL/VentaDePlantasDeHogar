@@ -1,0 +1,56 @@
+<!-- Janier Colorado Londoño CC 1152693358 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Venta de Plantas de Hogar</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Catálogo</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Bienvenido a Nuestra Tienda de Plantas de Hogar</h1>
+        <p>Encuentra la planta perfecta para tu espacio.</p>
+        
+
+        <div class="plant">
+            <img src="imagenes/planta1.jpg" alt="Planta 1">
+            <h2>Planta Tropical</h2>
+            <p>Perfecta para ambientes húmedos.</p>
+            <button onclick="agregarAlCarrito(1)">Comprar</button>
+        </div>
+        
+        <div class="plant">
+            <img src="imagenes/planta2.jpg" alt="Planta 2">
+            <h2>Planta Suculenta</h2>
+            <p>Requiere poca agua y luz.</p>
+            <button onclick="agregarAlCarrito(2)">Comprar</button>
+        </div>
+
+        <div id="carrito">
+                <h2>Carrito de Compras</h2>
+                <ul id="carrito-lista">
+                    <!-- Los elementos del carrito se agregan aquí dinámicamente con JS -->
+                </ul>
+            </div>
+        
+
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Venta de Plantas de Hogar</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
