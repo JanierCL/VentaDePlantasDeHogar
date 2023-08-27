@@ -1,4 +1,4 @@
-// Código de los perfiles de usuario
+// Código de los perfiles de usuario ensayando cambios en github
 let esAdministrador = false;
 
 // Cambiar el perfil al hacer clic en un botón
