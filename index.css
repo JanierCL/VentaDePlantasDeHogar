@@ -1,3 +1,33 @@
+/* Estilos de la información de la planta identificada */
+.planta-info {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
+    text-align: left;
+}
+
+.planta-info h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.planta-info p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.planta-info img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 10px;
+    float: left;
+    border-radius: 5px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
 /* Estilos generales ensayando cambios en github*/
 body {
     font-family: Arial, sans-serif;
