@@ -8,6 +8,8 @@ function cambiarPerfil() {
 }
 
 
+
+
 // Código del carrito de compras y el inventario
 const inventario = [
     { id: 1, nombre: 'Planta Tropical', precio: 20000, stock: 0 },
@@ -34,10 +36,8 @@ function agregarAlCarrito(id) {
         carrito.push(planta);
         reducirStock(id, 1);
         actualizarCarrito();
-
- const imagenUrl = `C:\Users\JANIER\ventaplantas\src\imagenes\planta2`; // se agrega la URL de la imagen
-        identificarPlantaPorImagen(imagenUrl);
-        
+const imagenUrl = `C:\Users\JANIER\ventaplantas\src\imagenes\planta2`; // se agrega la URL de la imagen
+        identificarPlantaPorImagen(imagenUrl);        
     } else {
         alert('La planta no está disponible en stock.');
     }
@@ -58,7 +58,6 @@ function mostrarCarrito() {
     const carritoElement = document.getElementById('carrito');
     carritoElement.style.display = 'block';
 }
-
 
 // Función para obtener detalles de la planta por imagen
 function obtenerDetallesDePlantaPorImagen(C:\Users\JANIER\ventaplantas\src) {
