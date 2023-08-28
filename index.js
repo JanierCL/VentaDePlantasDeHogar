@@ -1,4 +1,4 @@
-// Código de los perfiles de usuario ensayando cambios en github
+// Código de los perfiles de usuario
 let esAdministrador = false;
 
 // Cambiar el perfil al hacer clic en un botón
@@ -36,8 +36,11 @@ function agregarAlCarrito(id) {
         carrito.push(planta);
         reducirStock(id, 1);
         actualizarCarrito();
-const imagenUrl = `C:\Users\JANIER\ventaplantas\src\imagenes\planta2`; // se agrega la URL de la imagen
-        identificarPlantaPorImagen(imagenUrl);        
+
+        // Identificar la planta por imagen
+        const imagenUrl = `/imagenes/planta2`; // URL de la imagen
+        identificarPlantaPorImagen(imagenUrl);
+
     } else {
         alert('La planta no está disponible en stock.');
     }
@@ -57,4 +60,39 @@ function actualizarCarrito() {
 function mostrarCarrito() {
     const carritoElement = document.getElementById('carrito');
     carritoElement.style.display = 'block';
+}
+
+// Función para obtener detalles de la planta por imagen
+async function obtenerDetallesDePlantaPorImagen(imagenUrl) {
+    const apiKey = 'Pkp22tJmOJku4cMAwq60VynFCn34H15heO8QQOBuwJArCLUgsH'; // Mi clave de API
+    const apiUrl = `https://plant.id/api/v3/identify?images=${imagenUrl}`;
+
+    try {
+        const response = await fetch(apiUrl, {
+            method: 'GET',
+            headers: {
+                'Api-Key': apiKey
+            }
+        });
+
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error al obtener detalles de la planta:', error);
+        return null;
+    }
+}
+
+// Función para manejar la identificación de planta por imagen
+async function identificarPlantaPorImagen(imagenUrl) {
+    const detallesDePlanta = await obtenerDetallesDePlantaPorImagen(imagenUrl);
+
+    if (detallesDePlanta && detallesDePlanta.suggestions.length > 0) {
+        const plantaIdentificada = detallesDePlanta.suggestions[0].plant_name;
+        const plantaElement = document.getElementById('planta-identificada');
+        plantaElement.textContent = `Planta identificada: ${plantaIdentificada}`;
+    } else {
+        const plantaElement = document.getElementById('planta-identificada');
+        plantaElement.textContent = 'No se pudo identificar la planta.';
+    }
 }
