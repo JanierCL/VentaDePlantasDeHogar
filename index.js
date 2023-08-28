@@ -38,7 +38,7 @@ function agregarAlCarrito(id) {
         actualizarCarrito();
 
         // Identificar la planta por imagen
-        const imagenUrl = `/imagenes/planta2`; // URL de la imagen
+        const imagenUrl = `C:\Users\JANIER\ventaplantas\src\imagenes\planta2`; // URL de la imagen
         identificarPlantaPorImagen(imagenUrl);
 
     } else {
