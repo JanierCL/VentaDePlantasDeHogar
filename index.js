@@ -28,7 +28,7 @@ function reducirStock(id, cantidad) {
     }
 }
 
-async function agregarAlCarrito(id) {
+function agregarAlCarrito(id) {
     const planta = obtenerPlantaPorId(id);
     if (planta && planta.stock > 0) {
         carrito.push(planta);
@@ -61,7 +61,7 @@ function mostrarCarrito() {
 
 
 // Función para obtener detalles de la planta por imagen
-async function obtenerDetallesDePlantaPorImagen(C:\Users\JANIER\ventaplantas\src) {
+function obtenerDetallesDePlantaPorImagen(C:\Users\JANIER\ventaplantas\src) {
     const apiKey = 'Pkp22tJmOJku4cMAwq60VynFCn34H15heO8QQOBuwJArCLUgsH'; // se ingresa clave de API
     const apiUrl = `https://plant.id/api/v3/identify?images=${C:\Users\JANIER\ventaplantas\src\imagenes\planta2}`;
 
