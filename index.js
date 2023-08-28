@@ -65,12 +65,16 @@ function reducirStock(id, cantidad) {
     }
 }
 
-function agregarAlCarrito(id) {
+async function agregarAlCarrito(id) {
     const planta = obtenerPlantaPorId(id);
     if (planta && planta.stock > 0) {
         carrito.push(planta);
         reducirStock(id, 1);
         actualizarCarrito();
+
+ const imagenUrl = `C:\Users\JANIER\ventaplantas\src\imagenes\planta2`; // se agrega la URL de la imagen
+        identificarPlantaPorImagen(imagenUrl);
+        
     } else {
         alert('La planta no está disponible en stock.');
     }
